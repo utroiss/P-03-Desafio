@@ -1,0 +1,219 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,input{
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color:#EFEFEF;
+}
+
+body ::before{
+  content: '';
+  width: 100%;
+  height: 436px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:-1;/*camadas que se formam baseadas na primeira camada "0", nessse caso ela está atrás da primeira camada, ou seja, da camda da página*/
+  background-color:#535971 ;
+}
+
+.page{
+  width: 736px;
+  margin: auto;
+}
+
+header{
+  width: 319px;
+  margin-top: 80px;
+  color: white;
+}
+
+header h1{
+  font-family:"Staatliches";
+  font-weight: 400;
+  font-size:48px;
+}
+
+header p{
+ font-size:20px;
+ margin-top:18px;
+ margin-bottom:58px;
+}
+
+form{
+  margin-top: 58px;
+  background-color: #FAFAFC;
+  min-height: 300px;
+  border-radius: 8px 8px 0 0;
+
+  padding:64px;
+
+  display: flex; 
+  flex-direction: column;
+  gap: 32px;
+
+}
+
+.fieldset-wrapper{ /*bug do chrome*/
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+}
+
+fieldset{
+  border: none;
+}
+
+fieldset legend{
+  font-family:"Staatliches";
+  font-style:normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+
+  width: 100%;
+
+  border-bottom: 1px solid #E6E6F0;
+  padding-bottom: 16px;
+  color:#535971;
+}
+
+fieldset h2{
+  font-family:"Staatliches";
+  font-style:normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+
+  width: 100%;
+
+  padding-bottom: 16px;
+  color:#535971;
+}
+
+legend{
+  font-family: "Staatliches";
+  font-weight: 400;
+}
+
+.input-wrapper{/*ativa o display:flex, pra colocar um embaixo do outro, pois o input é inline-block e a parte escita é inline, isso delimita as opções de mexer*/
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  color: #4e4958;
+}
+
+.input-wrapper label span{
+  margin-left: 12px;
+
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #C1BCCC;
+}
+
+.input-wrapper label span:hover{
+  color: #7d7987;
+}
+
+.input-wrapper input{
+  background: #FAFAFC;
+
+  border:1px solid #E6E6F0;
+  border-radius:8px;
+
+  height: 56px;
+
+  padding: 0 24px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #655e5e;
+}
+
+.col-2{
+  display: flex;
+  gap: 22px;
+  
+}
+
+.col-2 > div:nth-child(1){
+  width: 100%;
+}
+
+.col-3{
+  display: flex;
+  gap: 32px;
+
+}
+
+.col-3 > div:nth-child(1){
+  width: 100%;
+}
+
+.col-trois{
+  display: flex;
+  gap: 32px;
+}
+
+.col-trois > div:nth-child(1){
+  width: 100%;
+}
+
+footer{
+  background: #535971;
+
+  height: 160px;
+
+  display: flex;
+  flex-direction:column ;
+
+  padding:40px 64px;
+  
+  margin-bottom: 100px;
+
+  border-top: 1px solid #D6D6D6;
+  border-radius: 0 0 8px 8px;
+}
+
+footer .button{
+  height: 50px;
+  background: #FF5374;
+  border: 0;
+  border-radius: 8px;
+
+  font-family: "Staatliches";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #FFFFFF;
+}
+
+legend{
+  font-family: "Staatliches";
+  font-weight: 400;
+}
+
+footer .button:hover{ 
+  background: #a1384d;
+}
+
+input:invalid{
+  border: 1px solid #ff0000;
+}
